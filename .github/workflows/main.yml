@@ -20,7 +20,7 @@ jobs:
 
     - name: Deploy
       run: |
-        ssh root@207.154.241.223 '
+        ssh -o StrictHostKeyChecking=no root@207.154.241.223 '
           #!/bin/bash
     
           # Change directory to the location of the Docker project
