@@ -24,7 +24,7 @@ jobs:
           #!/bin/bash
     
           # Change directory to the location of the Docker project
-          cd /root/docker/wpbedrock
+          cd /data/docker/wpbedrock
     
           # Pull the latest changes from the Git repository
           git pull origin main
