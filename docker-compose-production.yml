@@ -13,7 +13,7 @@ services:
       - mariadb
   php:
     build: ./php
-    env_file: ./root/env/.env.dev
+    env_file: ./root/env/.env.production
     volumes:
       - ./root:/var/www/html
   mariadb:
