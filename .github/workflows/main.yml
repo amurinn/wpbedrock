@@ -17,6 +17,8 @@ jobs:
       uses: webfactory/ssh-agent@v0.5.3
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        ssh-known-hosts: |
+          207.154.241.223 |1|Q6c6sDI/+izymHAEGoLlMnvjdSc=|NLOQB7doDyLOgENYt52S44ES5PA= ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl
 
     - name: Deploy
       run: |
