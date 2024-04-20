@@ -25,5 +25,4 @@ jobs:
             echo "deploy.sh is not executable, marking it as executable"
             chmod +x /root/docker/wpbedrock/deploy.sh
           fi
-          bash -s' < /root/docker/wpbedrock/deploy.sh
-
+          /root/docker/wpbedrock/deploy.sh'
