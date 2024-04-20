@@ -17,14 +17,7 @@ jobs:
       uses: webfactory/ssh-agent@v0.5.3
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        ssh-known-hosts: |
-          207.154.241.223 |1|Q6c6sDI/+izymHAEGoLlMnvjdSc=|NLOQB7doDyLOgENYt52S44ES5PA= ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl
 
     - name: Deploy
       run: |
-        ssh root@207.154.241.223 '
-          if [ ! -x "/root/docker/wpbedrock/deploy.sh" ]; then
-            echo "deploy.sh is not executable, marking it as executable"
-            chmod +x /root/docker/wpbedrock/deploy.sh
-          fi
-          /root/docker/wpbedrock/deploy.sh'
+        ssh root@207.154.241.223 'bash -s' < /root/docker/wpbedrock/deploy.sh
