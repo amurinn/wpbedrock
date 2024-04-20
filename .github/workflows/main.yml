@@ -20,5 +20,6 @@ jobs:
 
     - name: Deploy
       run: |
-        ssh root@207.154.241.223 'bash -s' < deploy.sh
+        ssh root@207.154.241.223 'bash -s' < /home/runner/docker/wpbedrock/deploy.sh
+
 
