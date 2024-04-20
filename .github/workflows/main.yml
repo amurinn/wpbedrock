@@ -18,16 +18,12 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: Check if deploy.sh is executable
-      run: |
-        if [ ! -x "/root/docker/wpbedrock/deploy.sh" ]; then
-          echo "deploy.sh is not executable, marking it as executable"
-          chmod +x /root/docker/wpbedrock/deploy.sh
-        fi
-
     - name: Deploy
       run: |
-        ssh root@207.154.241.223 'bash -s' < /root/docker/wpbedrock/deploy.sh
-
-
+        ssh root@207.154.241.223 '
+          if [ ! -x "/root/docker/wpbedrock/deploy.sh" ]; then
+            echo "deploy.sh is not executable, marking it as executable"
+            chmod +x /root/docker/wpbedrock/deploy.sh
+          fi
+          bash -s' < /root/docker/wpbedrock/deploy.sh
 
