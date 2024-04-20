@@ -20,4 +20,16 @@ jobs:
 
     - name: Deploy
       run: |
-        sudo ssh root@207.154.241.223 'bash -s' < /root/docker/wpbedrock/deploy.sh
+        ssh root@207.154.241.223 '
+          #!/bin/bash
+    
+          # Change directory to the location of the Docker project
+          cd /root/docker/wpbedrock
+    
+          # Pull the latest changes from the Git repository
+          git pull origin main
+    
+          # Restart Docker containers
+          docker-compose down
+          docker-compose up -d
+        '
