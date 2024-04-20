@@ -20,4 +20,9 @@ jobs:
 
     - name: Deploy
       run: |
-        ssh root@207.154.241.223 'echo "hello"'
+        if ssh -o "BatchMode=yes" root@207.154.241.223 'echo "SSH connection successful"'; then
+          echo "SSH connection successful. Deploying..."
+        else
+          echo "SSH connection failed. Deployment aborted."
+          exit 1
+        fi
