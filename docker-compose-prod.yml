@@ -3,7 +3,7 @@ services:
   nginx:
     image: nginx:latest
     volumes:
-      - ./nginx/host-production.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/host-prod.conf:/etc/nginx/conf.d/default.conf
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./root:/var/www/html
     ports:
