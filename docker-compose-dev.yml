@@ -27,6 +27,14 @@ services:
       - ./data:/var/lib/mysql
     ports:
       - 3306:3306
+  wordpress-cli:
+    image: wordpress:cli
+    volumes:
+      - ./root:/var/www/html
+    depends_on:
+      - php
+      - mariadb
+    command: ["tail", "-f", "/dev/null"]
   adminer:
     image: adminer
     restart: always
