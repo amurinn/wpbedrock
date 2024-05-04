@@ -38,7 +38,6 @@
   ],
   "require": {
     "php": ">=8.1",
-    "ext-gd": "*",
     "composer/installers": "^1.4",
     "oscarotero/env": "^1.2.0",
     "roots/wordpress": "6.5.2",
