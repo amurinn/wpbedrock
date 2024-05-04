@@ -11,6 +11,9 @@ web/.DS_Store
 web/app/.DS_Store
 web/app/cache/*
 !web/app/cache/.gitkeep
+web/app/mcloud-view-cache/
+web/app/mcloud-reports/
+
 # WordPress
 web/wp
 web/.htaccess
@@ -27,3 +30,5 @@ env
 # WP-CLI
 wp-cli.local.yml
 `~
+
+bucket-credentials.json

@@ -93,10 +93,26 @@ Config::define('NONCE_SALT', env('NONCE_SALT'));
 Config::define('AUTOMATIC_UPDATER_DISABLED', true);
 Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 // Disable the plugin and theme file editor in the admin
-Config::define('DISALLOW_FILE_EDIT', true);
+Config::define('DISALLOW_FILE_EDIT', false);
 // Disable plugin and theme updates and installation from the admin
-Config::define('DISALLOW_FILE_MODS', true);
+Config::define('DISALLOW_FILE_MODS', false);
 Config::define('APP_KEY', env('APP_KEY'));
+
+//WP media Cloud
+Config::define('MCLOUD_TOOL_ENABLED_STORAGE', env('MCLOUD_TOOL_ENABLED_STORAGE'));
+Config::define('MCLOUD_TOOL_ENABLED_IMGIX', env('MCLOUD_TOOL_ENABLED_IMGIX'));
+Config::define('MCLOUD_TOOL_ENABLED_MEDIA_UPLOAD', env('MCLOUD_TOOL_ENABLED_MEDIA_UPLOAD'));
+Config::define('MCLOUD_TOOL_ENABLED_CROP', env('MCLOUD_TOOL_ENABLED_CROP'));
+Config::define('MCLOUD_TOOL_ENABLED_VIDEO_ENCODER', env('MCLOUD_TOOL_ENABLED_VIDEO_ENCODER'));
+Config::define('MCLOUD_TOOL_ENABLED_OPTIMIZER', env('MCLOUD_TOOL_ENABLED_OPTIMIZER'));
+Config::define('MCLOUD_TOOL_ENABLED_ASSETS', env('MCLOUD_TOOL_ENABLED_ASSETS'));
+Config::define('MCLOUD_TOOL_ENABLED_BROWSER', env('MCLOUD_TOOL_ENABLED_BROWSER'));
+Config::define('MCLOUD_TOOL_ENABLED_DEBUGGING', env('MCLOUD_TOOL_ENABLED_DEBUGGING'));
+Config::define('MCLOUD_TOOL_ENABLED_IMAGE_SIZES', env('MCLOUD_TOOL_ENABLED_IMAGE_SIZES'));
+Config::define('MCLOUD_VIEW_CACHE', env('MCLOUD_VIEW_CACHE'));
+Config::define('MCLOUD_STORAGE_PROVIDER', env('MCLOUD_STORAGE_PROVIDER'));
+Config::define('MCLOUD_STORAGE_GOOGLE_BUCKET', env('MCLOUD_STORAGE_GOOGLE_BUCKET'));
+Config::define('MCLOUD_STORAGE_GOOGLE_CREDENTIALS_FILE', env('MCLOUD_STORAGE_GOOGLE_CREDENTIALS_FILE'));
 
 /**
  * Debugging Settings
